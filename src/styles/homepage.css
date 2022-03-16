@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #da1445;
+    --secondary-color: #ee3462;
+    --icon-color: #333;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-section {
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    top: 0;
+    z-index: -1;
+    filter: brightness(95%);
+    margin-top: 3.5rem;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+  
+  .badge {
+    background-color: var(--primary-color);
+  }
+  
+  .badge-icon {
+    background-color: var(--primary-color) !important;
+  }
+  
+  .btn-primary {
+    border: 2px solid;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .heading-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: auto;
+    padding: 1rem;
+    margin: 2rem;
+  }
+  
+  /******* Featured section styling *******/
+  
+  .featured-product {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .card-container .image-div .card-badge-ecom {
+    background-color: var(--primary-color);
+  }
+  
+  /****** Cotegory section styling *******/
+  
+  .card-cotegory {
+    width: 20rem;
+    height: 14.2rem;
+  }
+  
+  .image-cotegory {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    height: 14.1rem;
+    width: 15rem;
+  }
+  
+  .card-badge-cotegory {
+    top: 5.5rem;
+    opacity: 0.7;
+  }
