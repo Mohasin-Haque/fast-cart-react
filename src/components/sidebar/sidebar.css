@@ -1,0 +1,53 @@
+.sidebar {
+    position: sticky;
+    top: 0;
+  }
+  
+  .advertisement {
+    margin-top: 1rem;
+  }
+
+.items{
+    padding: 1rem;
+}
+
+.filter{
+    justify-content: space-between;
+}
+
+.filter-text{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.clear-text{
+    border-bottom: 1px solid;
+}
+
+.clear-text:hover{
+    color: var(--secondary-color);
+}
+
+.inputs{
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radio-unchecked{
+    margin: 0.4rem;
+}
+
+.price-range{
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.slider {
+    width: 100%;
+    height: 15px;
+    border-radius: 5px; 
+    opacity: 0.9;
+    transition: opacity .2s;
+  }
