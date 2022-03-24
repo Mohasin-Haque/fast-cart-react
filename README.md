@@ -1,3 +1,1 @@
-## E-Commerce Backend
-
-This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+fastcart is a e-commerce website which have a wide range and variety of items in clothings and apparels. Shop from home with us and get the things delivered to your doorstep in exclusive prices.
