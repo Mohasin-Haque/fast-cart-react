@@ -1,4 +1,4 @@
-import { featuredImg } from "../../assets/index";
+import { categoryImg } from "../../assets/index";
 
 import "./sidebar.css";
 
@@ -72,7 +72,7 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <div className="advertisement">
-                        <img src={ featuredImg } alt="error" />
+                        <img src={ categoryImg } alt="error" />
                     </div>
                 </div>
             </div>
