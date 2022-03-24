@@ -6,11 +6,11 @@ const ProductsPage = () => {
         <div>
             <Navbar />
             <Sidebar />
-            <div class="main-container-components">
-                <div class="products-div flex-center">
-                    <p class="filter-text">Showing all Products </p> <span> ( showing 6 products ) </span>
+            <div className="main-container-components">
+                <div className="products-div flex-center">
+                    <p className="filter-text">Showing all Products </p> <span> ( showing 6 products ) </span>
                 </div>
-                <div class="flex-center products-container">
+                <div className="flex-center products-container">
                     <ProductsCard />
                     <ProductsCard />
                     <ProductsCard />
