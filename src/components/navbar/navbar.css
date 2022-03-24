@@ -110,6 +110,7 @@
   @media (max-width: 768px) {
     .toggle-button-ecom {
       display: flex;
+      cursor: pointer
     }
     .navbar-links-ecom {
       display: none;
