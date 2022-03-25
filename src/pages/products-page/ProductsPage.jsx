@@ -35,7 +35,6 @@ const ProductsPage = () => {
                     {products.map((items) => {
                         return <ProductsCard key={items.id} products={items} />
                     })}
-
                 </div>
             </div>
         </div>
