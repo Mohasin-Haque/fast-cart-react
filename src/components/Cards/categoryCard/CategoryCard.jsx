@@ -1,4 +1,4 @@
-import { categoryImg } from "../../../assets"
+import { categoryImg } from "../../../assets/index";
 
 const CategoryCard = () => {
     return (

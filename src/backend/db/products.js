@@ -1,4 +1,6 @@
 import { v4 as uuid } from "uuid";
+import { saree1, saree2, saree3, saree4, saree5, saree6, } from "../../assets/index";
+
 
 /**
  * Product Database can be added here.
@@ -8,23 +10,44 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
-    title: "You Can WIN",
-    author: "Shiv Khera",
-    price: "5000",
-    categoryName: "non-fiction",
+    image: saree1,
+    title: "Sapphire Banarasi Saree",
+    price: "Rs. 3,990 only",
+    categoryName: "women-wear",
   },
   {
     _id: uuid(),
-    title: "You are Winner",
-    author: "Junaid Qureshi",
-    price: "3000",
-    categoryName: "horror",
+    image: saree2,
+    title: "Banarasi Silk Saree",
+    price: "Rs. 3,390 only",
+    categoryName: "women-wear",
   },
   {
     _id: uuid(),
-    title: "Think and Grow Rich",
-    author: "Shiv Khera",
-    price: "1000",
-    categoryName: "fiction",
+    image: saree3,
+    title: "Black Banarasi Saree",
+    price: "Rs. 3,340 only",
+    categoryName: "women-wear",
+  },
+  {
+    _id: uuid(),
+    image: saree4,
+    title: "Purple BanarasiSaree",
+    price: "Rs. 3,590 only",
+    categoryName: "women-wear",
+  },
+  {
+    _id: uuid(),
+    image: saree5,
+    title: "Red Banarasi Saree",
+    price: "Rs. 3,560 only",
+    categoryName: "women-wear",
+  },
+  {
+    _id: uuid(),
+    image: saree6,
+    title: "Maroom Banarasi Saree",
+    price: "Rs. 3,750 only",
+    categoryName: "women-wear",
   },
 ];
