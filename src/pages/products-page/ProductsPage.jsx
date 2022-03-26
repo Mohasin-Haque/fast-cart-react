@@ -7,6 +7,7 @@ const ProductsPage = () => {
 
     const [loader, setLoader] = useState(false);
     const [products, setProducts] = useState([]);
+    // const [wishlist,setWishlist] = useState([]);
 
     useEffect(() => {
         fetchProducts()
@@ -38,7 +39,7 @@ const ProductsPage = () => {
                 </div>
             </div>
         </div>
-    )
+    )   
 }
 
 export { ProductsPage }

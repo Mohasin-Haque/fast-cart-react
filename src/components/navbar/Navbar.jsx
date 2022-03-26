@@ -1,6 +1,7 @@
 import "../navbar/navbar.css";
 import { useState } from "react";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
     return (
         <div>
             <nav className="navbar-ecom">
-                <a href="../index.html" className="brand-title-ecom">fastcart</a>
+                <Link className="brand-title-ecom" to="/">fastcart</Link>
                 <div onClick={openNav} href="/" className="toggle-button-ecom">
                     <span className="bar-ecom"></span>
                     <span className="bar-ecom"></span>
@@ -22,9 +23,9 @@ const Navbar = () => {
                 </div>
                 <div className={classNames("navbar-links-ecom", { "navbar-links-ecom active": isOpen })}>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/"><i className="bi bi-heart"></i> wishlist</a></li>
-                        <li><a href="/"><i className="bi bi-cart"></i>cart</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/wishlist"><i className="bi bi-heart"></i> wishlist</Link></li>
+                        <li><Link to="/cart"><i className="bi bi-cart"></i>cart</Link></li>
                     </ul>
                 </div>
             </nav>
