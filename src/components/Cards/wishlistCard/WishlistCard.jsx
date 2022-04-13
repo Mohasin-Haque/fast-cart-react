@@ -1,12 +1,10 @@
-import Link from "react";
-
 const WishlistCard = () => {
     return(
         <section className="card-section">
                 <div className="card-wrapper">
                     <div className="image">
                         <img className="cart-image"
-                            src=""
+                            src="https://unsplash.it/400"
                             alt="error" />
                     </div>
                     <div className="side-container">
@@ -21,8 +19,8 @@ const WishlistCard = () => {
                             <p>50% off</p>
                         </div>
                         <div className="action-container">
-                            <Link className="action secondary-action font-weight" to="/cart">Move to Cart</Link>
-                            <Link className="action primary-action font-weight" to="/checkout">Checkout</Link>
+                            <button to="/cart" className="action secondary-action font-weight">Move to Cart</button>
+                            <button to="/checkout" className="action primary-action font-weight">Checkout</button>
                         </div>
                     </div>
                 </div>

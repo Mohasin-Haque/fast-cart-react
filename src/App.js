@@ -9,6 +9,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/wishlist" element={<WishlistPage />} />
+        {/* <Route path="/cart" element={<CartPage />} /> */}
       </Routes>
     </div>
   );

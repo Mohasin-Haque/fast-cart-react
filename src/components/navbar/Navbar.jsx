@@ -3,7 +3,7 @@ import { useState } from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({cartCounter}) => {
     const [isOpen, setIsOpen] = useState(false);
     const openNav = () => {
         setIsOpen(!isOpen)
@@ -25,7 +25,7 @@ const Navbar = () => {
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/wishlist"><i className="bi bi-heart"></i> wishlist</Link></li>
-                        <li><Link to="/cart"><i className="bi bi-cart"></i>cart</Link></li>
+                        <li><Link to="/cart"><i className="bi bi-cart">{cartCounter}</i>cart</Link></li>
                     </ul>
                 </div>
             </nav>
