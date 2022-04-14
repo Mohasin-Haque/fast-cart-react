@@ -1,0 +1,137 @@
+.cards-center {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+  
+  .card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .card-wrapper {
+    border: 1px solid red;
+    display: flex;
+    height: 15rem;
+    border-radius: 0.5rem;
+  }
+  
+  .image {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cart-image {
+    height: 100%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  
+  .heading-cart {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .side-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem 0.5rem 1rem;
+  }
+  
+  .payment {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  
+  .rate {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .original-rate {
+    font-size: 1rem;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  
+  .button-div {
+    display: flex;
+    gap: 0.3rem;
+  }
+  
+  .cart-button {
+    font-size: 1.2rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    background-color: var(--body-background-color);
+  }
+  
+  .cart-input {
+    width: 3rem;
+    outline: none;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .action-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .action {
+    border: 1px solid var(--secondary-color);
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .primary-action {
+    color: var(--body-background-color);
+    background-color: var(--primary-color);
+  }
+  
+  .font-weight {
+    font-weight: 500;
+  }
+  
+  .details {
+    border: 1px solid var(--primary-color);
+    width: fit-content;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .filter-text {
+    padding-bottom: 0.5rem;
+  }
+  
+  .price-text {
+    border-bottom: 1px solid;
+  }
+  
+  .flex-center-justify {
+    justify-content: space-between;
+    margin: 0.5rem;
+  }
+  
+  .amount-div {
+    margin-top: 1rem;
+    padding: 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+  }
