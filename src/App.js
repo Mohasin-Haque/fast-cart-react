@@ -1,5 +1,5 @@
 import "./App.css";
-import { LandingPage, ProductsPage, WishlistPage } from "./pages/index";
+import { LandingPage, ProductsPage, WishlistPage, CartPage } from "./pages/index";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/wishlist" element={<WishlistPage />} />
-        {/* <Route path="/cart" element={<CartPage />} /> */}
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
     </div>
   );

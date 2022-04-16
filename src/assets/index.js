@@ -15,5 +15,8 @@ import saree6 from "./images/products/saree6.jpg";
 import saree7 from "./images/products/saree7.jpg";
 import featuredImg from "./images/products/featuredImg.webp";
 import categoryImg from "./images/products/categoryImg.webp";
+import categoryImg2 from "./images/products/categoryImg2.webp";
+import categoryImg3 from "./images/products/categoryImg3.webp";
+import emptyCart from "./images/products/emptyCart.png";
 
-export { Ban1, Ban2, Ban3, Ban4, saree1, saree2, saree3, saree4, saree5, saree6, saree7, featuredImg, categoryImg}
+export { Ban1, Ban2, Ban3, Ban4, saree1, saree2, saree3, saree4, saree5, saree6, saree7, featuredImg, categoryImg, categoryImg2, categoryImg3, emptyCart }

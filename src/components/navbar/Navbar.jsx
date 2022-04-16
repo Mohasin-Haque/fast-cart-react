@@ -2,8 +2,10 @@ import "../navbar/navbar.css";
 import { useState } from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/ContextCart";
 
 const Navbar = ({cartCounter}) => {
+    const { cartState } = useCartContext();
     const [isOpen, setIsOpen] = useState(false);
     const openNav = () => {
         setIsOpen(!isOpen)
@@ -25,7 +27,7 @@ const Navbar = ({cartCounter}) => {
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/wishlist"><i className="bi bi-heart"></i> wishlist</Link></li>
-                        <li><Link to="/cart"><i className="bi bi-cart">{cartCounter}</i>cart</Link></li>
+                        <li><Link to="/cart"><i className="bi bi-cart"><span className="badges badge-small">{cartState.cartProducts.length}</span></i>cart</Link></li>
                     </ul>
                 </div>
             </nav>

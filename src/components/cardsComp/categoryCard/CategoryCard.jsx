@@ -1,6 +1,6 @@
-import { categoryImg } from "../../../assets/index";
+import { Link } from "react-router-dom";
 
-const CategoryCard = () => {
+const CategoryCard = ({product}) => {
     return (
         <section>
             <div className="card-container card-cotegory">
@@ -8,19 +8,19 @@ const CategoryCard = () => {
                     <div className="image-div">
                         <div className="overlay-image">
                             <img className="card-image image-horizontal image-cotegory"
-                                src={ categoryImg }
+                                src={ product.image }
                                 alt="error" />
                             <div className="card-badge card-badge-cotegory">Out of Stock</div>
                         </div>
                     </div>
                     <div className="card-content">
-                        <h2 className="card-heading">Printed Sarees</h2>
+                        <h2 className="card-heading">{ product.title }</h2>
                         <p className="card-author">by MH Textiles and Sarees</p>
                         <p className="card-content">
-                            Sarees for women. Look traditional.
+                            { product.description }
                         </p>
                         <div className="card-actions">
-                            <a className="btn btn-secondary btn-cotegory" href="./pages/product.html">Explore</a>
+                            <Link to="/products" className="btn btn-secondary btn-cotegory">Explore</Link>
                         </div>
                     </div>
                 </div>
