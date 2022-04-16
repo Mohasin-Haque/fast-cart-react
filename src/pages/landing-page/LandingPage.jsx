@@ -1,8 +1,26 @@
 import "./landing-page.css";
 import { Navbar, CategoryCard, FeaturedCard } from "../../components/index";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const LandingPage = () => {
+
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        fetchCategories()
+    }, []);
+
+    const fetchCategories = async () => {
+        try {
+            const response = await axios.get("./api/categories");
+            setCategories(response.data.categories);
+        } catch (error) {
+            console.error(error, "Happy Diwali, API phat gyi!!");
+        }
+    }
+
     return (
         <div>
             <Navbar />
@@ -21,8 +39,8 @@ const LandingPage = () => {
                             cotagory to explore more.
                         </p>
                         <div className="btn-container">
-                            <Link className="btn btn-primary" to="/products">Women's Wear</Link>
-                            <Link className="btn btn-secondary" to="/products">Men's Wear</Link>
+                            <Link className="btn btn-primary" to="/categories">Women's Wear</Link>
+                            <Link className="btn btn-secondary" to="/categories">Men's Wear</Link>
                         </div>
                     </div>
                 </section>
@@ -31,16 +49,14 @@ const LandingPage = () => {
                 <h3 className="heading heading-avatar heading-card heading-ecom">Featured</h3>
                 <div className="featured-product">
                     <FeaturedCard />
-                    <FeaturedCard />
-                    <FeaturedCard />
+                    
                 </div>
             </section>
             <section className="featured-section">
                 <h3 className="heading heading-avatar heading-card heading-ecom">Category</h3>
                 <div className="featured-product">
-                    <CategoryCard />
-                    <CategoryCard />
-                    <CategoryCard />
+                   {categories.map((product) => ( <CategoryCard key={product._id} product={product} /> )
+                    )}
                 </div>
             </section>
         </div>

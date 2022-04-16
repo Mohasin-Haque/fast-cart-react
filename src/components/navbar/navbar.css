@@ -138,3 +138,12 @@
       display: flex;
     }
   }
+
+  .badge-small{
+    background-color: black;
+    color: var(--body-background-color);
+    border-radius: 50%;
+    position: relative;
+    top: -0.5rem;
+    padding: 0.2rem;
+  }

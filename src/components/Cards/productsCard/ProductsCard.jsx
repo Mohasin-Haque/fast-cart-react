@@ -1,5 +1,5 @@
 import { useCartContext } from "../../../context/ContextCart";
-
+import { Link } from "react-router-dom";
 const ProductsCard = ({ product }) => {
     const { cartState, cartDispatch } = useCartContext();
     return (
@@ -21,7 +21,7 @@ const ProductsCard = ({ product }) => {
                 </div>
                 <div className="card-actions">
                 {cartState.cartProducts.find((item) => item._id === product._id) ? (
- <button className="card-btn">Go To Cart</button>
+                   <Link to="/cart"> <button className="card-btn">Go To Cart</button></Link>
                 ) : (
                     <button className="card-btn" onClick={() => cartDispatch({type: "ADD_TO_CART", payload: product})}>Add To Cart</button>
                 )}

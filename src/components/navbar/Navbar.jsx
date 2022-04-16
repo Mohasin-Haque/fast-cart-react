@@ -27,7 +27,7 @@ const Navbar = ({cartCounter}) => {
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/wishlist"><i className="bi bi-heart"></i> wishlist</Link></li>
-                        <li><Link to="/cart"><i className="bi bi-cart">{cartState.cartProducts.length}</i>cart</Link></li>
+                        <li><Link to="/cart"><i className="bi bi-cart"><span className="badges badge-small">{cartState.cartProducts.length}</span></i>cart</Link></li>
                     </ul>
                 </div>
             </nav>
