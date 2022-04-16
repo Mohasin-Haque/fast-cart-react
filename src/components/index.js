@@ -1,4 +1,4 @@
-import { CategoryCard, FeaturedCard, ProductsCard, WishlistCard, CartPriceCard, CartCard } from "./cards/index";
+import { CategoryCard, FeaturedCard, ProductsCard, WishlistCard, CartPriceCard, CartCard } from "./cardsComp/index";
 import { Navbar } from "./navbar/Navbar";
 import { Sidebar } from "./sidebar/Sidebar";
 
