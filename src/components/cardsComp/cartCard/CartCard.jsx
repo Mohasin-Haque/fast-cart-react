@@ -4,8 +4,6 @@ import { useCartContext } from "../../../context/ContextCart";
 const CartCard = (product) => {
     const { cartDispatch } = useCartContext();
     return (
-        <div className='cart-cards'>
-        <div class="cards-center flex-center">
             <section className="card-section">
                 <div className="card-wrapper">
                     <div className="image">
@@ -39,13 +37,11 @@ const CartCard = (product) => {
                                 </div>
                             </div>
                             <div className="action-container">
-                                <button className="card-btn action secondary-action font-weight" to="#">Move To Wishlist</button>
+                                <button className="card-btn action secondary-action font-weight" to="#" >Move To Wishlist</button>
                             </div>
                     </div>
                 </div>
                 </section >
-        </div>
-  </div >
   )
 }
 

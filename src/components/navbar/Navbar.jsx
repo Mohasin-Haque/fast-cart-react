@@ -3,9 +3,11 @@ import { useState } from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/ContextCart";
+import { useWishlistContext } from "../../context/ContextWishlist";
 
-const Navbar = ({cartCounter}) => {
+const Navbar = () => {
     const { cartState } = useCartContext();
+    const { wishlistState } = useWishlistContext();
     const [isOpen, setIsOpen] = useState(false);
     const openNav = () => {
         setIsOpen(!isOpen)
@@ -26,7 +28,7 @@ const Navbar = ({cartCounter}) => {
                 <div className={classNames("navbar-links-ecom", { "navbar-links-ecom active": isOpen })}>
                     <ul>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/wishlist"><i className="bi bi-heart"></i> wishlist</Link></li>
+                        <li><Link to="/wishlist"><i className="bi bi-heart"><span className="badges badge-small">{wishlistState.wishlistData.length}</span></i> wishlist</Link></li>
                         <li><Link to="/cart"><i className="bi bi-cart"><span className="badges badge-small">{cartState.cartProducts.length}</span></i>cart</Link></li>
                     </ul>
                 </div>
