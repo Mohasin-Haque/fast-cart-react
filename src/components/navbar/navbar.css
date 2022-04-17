@@ -140,10 +140,10 @@
   }
 
   .badge-small{
-    background-color: black;
+    background-color: var(--icon-color);
     color: var(--body-background-color);
     border-radius: 50%;
     position: relative;
     top: -0.5rem;
-    padding: 0.2rem;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
   }
