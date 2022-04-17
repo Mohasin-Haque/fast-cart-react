@@ -135,3 +135,7 @@
     border-top: 1px solid;
     border-bottom: 1px solid;
   }
+
+  .wishlist-card{
+    margin: 1rem;
+  }
