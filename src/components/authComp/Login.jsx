@@ -12,7 +12,7 @@ const  Login = () => {
             </div>
             <div className="input-container font-size-one">
                 <p className="label-text">Password</p>
-                <input className="input input-text" type="text" placeholder="********" />
+                <input className="input input-text" type="password" placeholder="********" />
             </div>
             <div className="radio-actions flex-center">
                 <label htmlFor="radio-unchecked">

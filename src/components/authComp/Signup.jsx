@@ -16,7 +16,7 @@ const Signup = () => {
                     </div>
                     <div className="input-container font-size-one">
                         <p className="label-text">Password</p>
-                        <input className="input input-text" type="text" placeholder="********" />
+                        <input className="input input-text" type="password" placeholder="********" />
                     </div>
                     <div className="input-container font-size-one">
                         <p className="label-text">Confirm Password</p>
