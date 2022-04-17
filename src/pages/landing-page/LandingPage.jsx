@@ -39,8 +39,8 @@ const LandingPage = () => {
                             cotagory to explore more.
                         </p>
                         <div className="btn-container">
-                            <Link className="btn btn-primary" to="/categories">Women's Wear</Link>
-                            <Link className="btn btn-secondary" to="/categories">Men's Wear</Link>
+                            <Link className="btn btn-primary" to="/products">Women's Wear</Link>
+                            <Link className="btn btn-secondary" to="/products">Men's Wear</Link>
                         </div>
                     </div>
                 </section>
