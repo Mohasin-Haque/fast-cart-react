@@ -12,7 +12,14 @@ const ProductsCard = ({ product }) => {
                         <img className="card-image"
                             src={product.image}
                             alt="error" />
-                        <div className="dismiss"><i className="fas fa-heart heart-icon" onClick={() => wishlistDispatch({ type: "ADD_TO_WISHLIST", payload: product })}></i></div>
+                        <div className="dismiss">
+
+                            {wishlistState.wishlistData.find((item) => item._id === product._id) ? (
+                                <i className="fas fa-heart wishlist-bgcolor"  onClick={() => wishlistDispatch({ type: "REMOVE_FROM_WISHLIST", payload: product })}></i>
+                            ) : (
+                                <i className="fas fa-heart" onClick={() => wishlistDispatch({ type: "ADD_TO_WISHLIST", payload: product })}></i>
+                            )}
+                        </div>
                     </div>
                 </div>
                 <div className="card-content">
@@ -25,13 +32,13 @@ const ProductsCard = ({ product }) => {
                     {cartState.cartProducts.find((item) => item._id === product._id) ? (
                         <Link to="/cart"> <button className="card-btn">Go To Cart</button></Link>
                     ) : (
-                        <button className="card-btn" onClick={() => cartDispatch({ type: "ADD_TO_CART", payload: product })}>Add To Cart</button>
+                        <button className="action primary-action order-btn" onClick={() => cartDispatch({ type: "ADD_TO_CART", payload: product })}>Add To Cart</button>
                     )}
-                    {wishlistState.wishlistData.find((item) => item.id === product.id) ? (
-                        <Link to="/wishlist"><i className="fas fa-heart"></i></Link>
-                    ) : (
-                        <i className="fas fa-heart" onClick={() => wishlistDispatch({ type: "ADD_TO_WISHLIST", payload: product })}></i>
-                    )}
+                    {/* {wishlistState.wishlistData.find((item) => item._id === product._id) ? (
+                    <Link to="/wishlist"><i className="fas fa-heart"></i></Link>
+                ) : (
+                    <i className="fas fa-heart" onClick={() => wishlistDispatch({type: "ADD_TO_WISHLIST", payload: product})}></i>
+                )} */}
                 </div>
             </div>
         </section>
