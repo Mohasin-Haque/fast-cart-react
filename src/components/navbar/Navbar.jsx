@@ -30,6 +30,7 @@ const Navbar = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/wishlist"><i className="bi bi-heart"><span className="badges badge-small">{wishlistState.wishlistData.length}</span></i> wishlist</Link></li>
                         <li><Link to="/cart"><i className="bi bi-cart"><span className="badges badge-small">{cartState.cartProducts.length}</span></i>cart</Link></li>
+                        <li><Link to="/login"><i className="bi bi-person"></i>Profile</Link></li>
                     </ul>
                 </div>
             </nav>

@@ -1,0 +1,44 @@
+
+.center {
+    flex-direction: column;
+    margin: 3em;
+    padding: 2.5rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 0.6rem;
+    box-shadow: var(--box-shadow-card);
+  }
+  
+  .font-size-one {
+    font-size: 1rem;
+    margin: 1rem;
+  }
+  
+  .padding-one {
+    padding: 1rem;
+  }
+  
+  .input {
+    width: 20rem;
+  }
+  
+  .radio-actions {
+    justify-content: space-between;
+    margin: 1rem;
+  }
+  
+  .forgot-link {
+    color: var(--secondary-color);
+  }
+  
+  .login-btn {
+    width: 20rem;
+  }
+  
+  .signup-text {
+    text-align: center;
+  }
+  
+  .signup-link {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
