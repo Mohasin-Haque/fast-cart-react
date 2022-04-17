@@ -3,6 +3,7 @@ import { Navbar, CategoryCard, FeaturedCard } from "../../components/index";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import {  Ban2, Ban3 } from "../../assets";
 
 const LandingPage = () => {
 
@@ -11,7 +12,6 @@ const LandingPage = () => {
     useEffect(() => {
         fetchCategories()
     }, []);
-
     const fetchCategories = async () => {
         try {
             const response = await axios.get("./api/categories");
@@ -20,7 +20,6 @@ const LandingPage = () => {
             console.error(error, "Happy Diwali, API phat gyi!!");
         }
     }
-
     return (
         <div>
             <Navbar />
@@ -39,17 +38,29 @@ const LandingPage = () => {
                             cotagory to explore more.
                         </p>
                         <div className="btn-container">
-                            <Link className="btn btn-primary" to="/products">Women's Wear</Link>
-                            <Link className="btn btn-secondary" to="/products">Men's Wear</Link>
+                            <Link className="btn btn-primary" to="/products">Silk Special</Link>
+                            <Link className="btn btn-secondary" to="/products">Wedding Special</Link>
                         </div>
                     </div>
                 </section>
             </main>
             <section className="featured-section">
+            <h3 className="heading heading-avatar heading-card heading-ecom"> </h3>
+                <div className="featured-product">
+                    <img className="responsive" src={Ban2} alt="error" />
+                </div>
+            </section>
+            <section className="featured-section">
                 <h3 className="heading heading-avatar heading-card heading-ecom">Featured</h3>
                 <div className="featured-product">
-                    <FeaturedCard />
-                    
+                {categories.map((product) => ( <FeaturedCard key={product._id} product={product} /> )
+                )}     
+                </div>
+            </section>
+            <section className="featured-section">
+            <h3 className="heading heading-avatar heading-card heading-ecom"> </h3>
+                <div className="featured-product">
+                    <img className="responsive" src={Ban3} alt="error" />
                 </div>
             </section>
             <section className="featured-section">
