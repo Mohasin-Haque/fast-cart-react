@@ -1,9 +1,10 @@
 import { useWishlistContext } from "../../../context/ContextWishlist";
 import { useCartContext } from "../../../context/ContextCart";
+import { Link } from "react-router-dom";
 
 const WishlistCard = ({ product }) => {
     const { wishlistDispatch } = useWishlistContext();
-    const { cartDispatch } = useCartContext();
+    const { cartState, cartDispatch } = useCartContext();
     return (
         <section className="card-section">
             <div className="card-wrapper">
@@ -12,7 +13,7 @@ const WishlistCard = ({ product }) => {
                         src={product.image}
                         alt="error" />
                 </div>
-                <div className="side-container">
+                <div className="side-container"> 
                     <div className="heading-cart">
                         <h3>{product.title}</h3>
                     </div>
@@ -25,7 +26,11 @@ const WishlistCard = ({ product }) => {
                     </div>
                     <div className="action-container">
                         <button to="/cart" className="action secondary-action font-weight" onClick={() => wishlistDispatch({ type: "REMOVE_FROM_WISHLIST", payload: product })}>Remove from Wishlist</button>
+                        {cartState.cartProducts.find((item) => item._id === product._id) ? (
+                        <Link to="/cart"> <button className="action primary-action font-weight">Go To Cart</button></Link>
+                    ) : (
                         <button to="/checkout" className="action primary-action font-weight" onClick={() => cartDispatch({ type: "ADD_TO_CART", payload: product })}>Move to Cart</button>
+                    )}
                     </div>
                 </div>  
             </div>
