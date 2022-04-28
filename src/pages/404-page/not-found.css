@@ -1,0 +1,12 @@
+.error-code{
+    font-size: 5rem;
+}
+
+.buttons{
+    display: flex;
+    gap: 2rem;
+}
+
+.error-message{
+    margin: 1rem 1rem 2rem 1rem;
+}
