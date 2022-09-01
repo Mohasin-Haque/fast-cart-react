@@ -4,8 +4,10 @@ import classNames from "classnames";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/ContextCart";
 import { useWishlistContext } from "../../context/ContextWishlist";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
+    const { loginWithRedirect } = useAuth0();
     const { cartState } = useCartContext();
     const { wishlistState } = useWishlistContext();
     const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +17,7 @@ const Navbar = () => {
     return (
         <div>
             <nav className="navbar-ecom">
-                <Link className="brand-title-ecom" to="/">fastcart</Link>
+                <Link className="brand-title-ecom" to="/">FastCart</Link>
                 <div onClick={openNav} href="/" className="toggle-button-ecom">
                     <span className="bar-ecom"></span>
                     <span className="bar-ecom"></span>
@@ -30,7 +32,7 @@ const Navbar = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/wishlist"><i className="bi bi-heart"><span className="badges badge-small">{wishlistState.wishlistData.length}</span></i> wishlist</Link></li>
                         <li><Link to="/cart"><i className="bi bi-cart"><span className="badges badge-small">{cartState.cartProducts.length}</span></i>cart</Link></li>
-                        <li><Link to="/login"><i className="bi bi-person"></i>Profile</Link></li>
+                        <li><Link to="/login"><i className="bi bi-person" onClick={() => loginWithRedirect()}></i>Log In</Link></li>
                     </ul>
                 </div>
             </nav>
